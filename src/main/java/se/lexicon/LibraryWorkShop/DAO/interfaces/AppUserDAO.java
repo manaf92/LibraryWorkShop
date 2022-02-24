@@ -1,4 +1,4 @@
-package se.lexicon.LibraryWorkShop.DAO;
+package se.lexicon.LibraryWorkShop.DAO.interfaces;
 
 import se.lexicon.LibraryWorkShop.models.entity.AppUser;
 

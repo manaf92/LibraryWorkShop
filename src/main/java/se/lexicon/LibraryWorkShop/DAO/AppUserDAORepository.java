@@ -2,6 +2,7 @@ package se.lexicon.LibraryWorkShop.DAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import se.lexicon.LibraryWorkShop.DAO.interfaces.AppUserDAO;
 import se.lexicon.LibraryWorkShop.models.entity.AppUser;
 
 import javax.persistence.*;
@@ -10,7 +11,7 @@ import java.util.Collection;
 
 @Repository
 @Transactional
-public class AppUserDAORepository implements AppUserDAO{
+public class AppUserDAORepository implements AppUserDAO {
 
 
     private final EntityManager entityManager;

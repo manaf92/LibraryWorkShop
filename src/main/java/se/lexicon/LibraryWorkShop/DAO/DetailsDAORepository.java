@@ -1,9 +1,9 @@
 package se.lexicon.LibraryWorkShop.DAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import se.lexicon.LibraryWorkShop.DAO.interfaces.DetailsDAO;
 import se.lexicon.LibraryWorkShop.models.entity.Details;
 
 import javax.persistence.EntityManager;
@@ -11,7 +11,8 @@ import java.util.Collection;
 
 @Repository
 @Transactional
-public class DetailsDAORepository implements DetailsDAO{
+public class DetailsDAORepository implements DetailsDAO {
+
     private final EntityManager entityManager;
     @Autowired
     public DetailsDAORepository(EntityManager entityManager) {
@@ -25,7 +26,6 @@ public class DetailsDAORepository implements DetailsDAO{
 
     @Override
     public Collection<Details> findAll() {
-
         return entityManager.createQuery("SELECT d from Details d ", Details.class)
                 .getResultList();
     }
