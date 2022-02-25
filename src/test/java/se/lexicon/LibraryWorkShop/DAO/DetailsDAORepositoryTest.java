@@ -80,8 +80,6 @@ class DetailsDAORepositoryTest {
         System.out.println(actualName);
         assertEquals(expectedName,actualName);
 
-        testObject.findAll().forEach(System.out::println);
-
         // To check extra if they are same count of details
         int expectedCount = details.size();
 

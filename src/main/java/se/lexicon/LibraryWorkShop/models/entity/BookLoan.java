@@ -18,13 +18,15 @@ public class BookLoan {
     @JoinColumn (name = "fk_app_user_id")
     private AppUser borrower;
 
-
     @ManyToOne(
             cascade = {CascadeType.DETACH, CascadeType.REFRESH},
             fetch = FetchType.LAZY
     )
     @JoinColumn (name = "fk_book_id")
     private Book book;
+
+
+
 
     public BookLoan(int loanId, LocalDate loanDate, LocalDate dueDate, boolean returned) {
         this.loanId = loanId;
